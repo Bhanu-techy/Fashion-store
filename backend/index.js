@@ -20,6 +20,9 @@ app.use(express.json());
 const Product = require('./models/Product')
 const User = require("./models/User");
 
+const {sendRegistrationEmail } = require("./services/emailService");
+
+
 app.get("/products", async (req, res) => {
   try {
     const data = await Product.find();
@@ -28,6 +31,7 @@ app.get("/products", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 app.post("/register", async (req, res) => {
@@ -51,11 +55,12 @@ app.post("/register", async (req, res) => {
 
     await user.save();
 
+    await sendRegistrationEmail(email, name);
+
     res.status(201).json({
       msg: "User registered successfully",
       name : user.name, id : user.id
     });
-
     
   } catch (err) {
     res.status(500).json({ error: err.message });
