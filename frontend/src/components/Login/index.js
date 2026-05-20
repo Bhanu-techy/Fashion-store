@@ -44,7 +44,7 @@ function Login() {
     event.preventDefault()
 
     const userDetails = {email :mail, name, password:pass}
-    const url = 'http://localhost:5000/register'
+    const url = 'https://fashion-store-xjgc.onrender.com/register'
 
     const options = {
       method: 'POST',
