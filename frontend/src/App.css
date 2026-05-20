@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+
+.hr{
+  color: #bfbfbf;
+  width: 95vw;
+
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}

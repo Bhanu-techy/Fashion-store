@@ -1,0 +1,35 @@
+.cartItem{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    box-shadow: 4px 4px 6px 6px #fbf5f5;
+    padding: 10px;
+    margin: 10px;
+    
+}
+.cart-img{
+    width: 100px;
+    height: 100px;
+}
+.remove-btn{
+    background-color: rgb(90, 90, 245);
+    border: none;
+    color: #ffffff;
+    height: 25px;
+    border-radius: 3px;
+}
+
+@media (max-width : 576px) {
+    .cart-img{
+        width: 70px;
+        height: 70px;
+    }.remove-btn{
+        width: 50px;
+        font-size: 10px;
+    }p{
+        font-size: 13px;
+    }.remove-btn{
+        width: 50px;
+    }
+}
