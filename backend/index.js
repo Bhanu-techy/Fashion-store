@@ -104,10 +104,7 @@ app.get("/products/:id", async (req, res) => {
       });
     }
 
-    res.status(200).json({
-      success: true,
-      product,
-    });
+    res.send(product)
   } catch (error) {
     res.status(500).json({
       success: false,
