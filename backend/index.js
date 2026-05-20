@@ -52,14 +52,15 @@ app.post("/register", async (req, res) => {
       password: hashedPassword
     });
 
+     const token = jwt.sign(
+      { id: user.id, email: user.email }, process.env.JWT_SECRET, { expiresIn: "1d" }
+    );
+
     await user.save();
 
     await sendRegistrationEmail(email, name);
 
-    res.status(201).json({
-      msg: "User registered successfully",
-      name : user.name, id : user.id
-    });
+    res.status(200).json({token, user: {id: user.id, email: user.email,},});
     
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -105,6 +106,7 @@ app.get("/products/:id", async (req, res) => {
     }
 
     res.send(product)
+
   } catch (error) {
     res.status(500).json({
       success: false,
