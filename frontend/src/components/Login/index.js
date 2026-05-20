@@ -33,7 +33,7 @@ function Login() {
     if (response.ok) {
       Cookies.set('jwt_token', data.token, {expires: 30})
       navigate("/", {replace : true})
-      alert("Registration successfull")
+      
     } else {
       setErrmsg(data.message)
       setShowErr(true)
@@ -44,7 +44,7 @@ function Login() {
     event.preventDefault()
 
     const userDetails = {email :mail, name, password:pass}
-    const url = 'https://fashion-store-xjgc.onrender.com/register'
+    const url = 'http://localhost:5000/register'
 
     const options = {
       method: 'POST',
@@ -55,11 +55,10 @@ function Login() {
     const response = await fetch(url, options)
     const data = await response.json()
 
-    console.log(response)
     if (response.ok) {
       Cookies.set('jwt_token', data.token, {expires: 30})
       navigate("/", {replace : true})
-      console.log(data)
+      alert("Registration successfull")
     } else {
       setRegerr(data.msg)
       setShowRegErr(true)
