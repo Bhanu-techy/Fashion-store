@@ -7,8 +7,8 @@ function Filter({setCategory, search, setSearch, onClickSearch}) {
     <div className='filters-div'>
         <h2>Search by title</h2>
         <div className="search-bar">
-            <input type="search" value={search} onChange={(e)=>setSearch(e.target.value)} className="input"/>
-            <button className="search-btn" onClick={onClickSearch}><CiSearch size={25}/></button>
+            <input type="search" id='search' value={search} onChange={(e)=>setSearch(e.target.value)} className="input"/>
+            <button className="search-btn" id='search-btn' onClick={onClickSearch}><CiSearch size={25}/></button>
         </div>
         <div>
         <h2><span><IoFilterSharp/> </span>Filters</h2>

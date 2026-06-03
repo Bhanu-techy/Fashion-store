@@ -70,7 +70,7 @@ const loginContainer = () =>{
     <div className='login-container'>
         <div className='login-div'>
           <form onSubmit={submitForm}>
-            <h3 className='store-name-log'>Lumina Store</h3>
+            <h3 className='store-name-log'>Login In</h3>
           <div className="input-container">
                   <label htmlFor="username">EMAIL</label>
                   <input
@@ -92,7 +92,7 @@ const loginContainer = () =>{
                   />
                 </div>
                 {showSubmitErr && <p className="error-msg">{errMsg}</p>}
-                <button type="submit" className="login-button">
+                <button type="submit" id="login" className="login-button">
                   Login
                 </button>
               </form>
@@ -105,11 +105,11 @@ const registerContainer = ()=>(
   <div className='register-container'>
         <div className='register-div'>
           <form onSubmit={submitRegister}>
-            <h3 className='store-name-log'>Lumina Store</h3>
+            <h3 className='store-name-log'>Register</h3>
             <div className="input-container">
-                  <label htmlFor="username">UserName</label>
+                  <label htmlFor="newusername">UserName</label>
                   <input
-                    id="username"
+                    id="newusername"
                     type="text"
                     className="login-input"
                     value={name}
@@ -117,9 +117,9 @@ const registerContainer = ()=>(
                   />
                 </div>
           <div className="input-container">
-                  <label htmlFor="username">EMAIL</label>
+                  <label htmlFor="newmail">EMAIL</label>
                   <input
-                    id="username"
+                    id="newmail"
                     type="text"
                     className="login-input"
                     value={mail}
@@ -137,7 +137,7 @@ const registerContainer = ()=>(
                   />
                 </div>
                 {showRegErr && <p className="error-msg">{regerr}</p>}
-                <button type="submit" className="register-button">
+                <button type="submit" id="register" className="register-button">
                   Register
                 </button>
               </form>

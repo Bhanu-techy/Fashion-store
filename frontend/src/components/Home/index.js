@@ -96,7 +96,7 @@ function Home() {
                 <Product key={each.id} details={each}/>
             ))}
             </ul>
-            {!loadMore && <button className='load-more-btn' onClick={onClickLoadMore}>Load More</button>}
+            {!loadMore && <button className='load-more-btn' id='load-more' onClick={onClickLoadMore}>Load More</button>}
             </div>
         </div>
     )
