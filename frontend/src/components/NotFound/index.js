@@ -26,6 +26,7 @@ function NotFound() {
         type="button"
         className="homepage-button"
         onClick={onClickHomepage}
+        id="Shop-now"
       >
         Home Page
       </button>

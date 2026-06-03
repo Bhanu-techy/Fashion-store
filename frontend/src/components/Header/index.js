@@ -22,7 +22,7 @@ function Header() {
         <h3 className='store-name'>Lumina Store</h3>
         <nav className='nav-items'>
             <Link to="/">
-            <p>Home</p>
+            <p id="home">Home</p>
             </Link>
         </nav>
           <Link to="/cart" className='cart-icon'>
@@ -30,7 +30,7 @@ function Header() {
             <FiShoppingCart size={20}/>
             {cartLength >0 && <span className='cart-count'>{cartLength}</span>}
           </Link>
-          <button className='logout' onClick={onClickLogout}>
+          <button className='logout' id="logout" onClick={onClickLogout}>
             Logout
           </button>
   </div>
