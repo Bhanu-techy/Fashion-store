@@ -18,6 +18,7 @@ function Filter({setCategory, search, setSearch, onClickSearch}) {
                 <option value="women's clothing">Women's Clothing</option>
                 <option value="jewelery">Jewelery</option>
                 <option value="electonics">Electonics</option>
+                <option value="">All</option>
             </select>
         </div>
         
